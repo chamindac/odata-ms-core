@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <PackageId>OData.MS.CORE.API</PackageId>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <VersionSuffix>$(VersionSuffix)</VersionSuffix>
+    <Authors>chamindac</Authors>
+    <Company>My Company</Company>
+    <PackageDescription>NuGet package sample with dotnet pack!</PackageDescription>
+    <RepositoryUrl>https://github.com/chamindac/MyNuGetPackageDemo.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

@@ -3,14 +3,14 @@ using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using ODAT.MS.CORE.API.Models;
+using ODATA.MS.CORE.API.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ODAT.MS.CORE.API.Controllers
+namespace ODATA.MS.CORE.API.Controllers
 {
     class BaseApiController<T, S> : ODataController where T : BaseEntity<T> where S : ODataController
     {

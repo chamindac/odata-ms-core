@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ODAT.MS.CORE.API.Models
+namespace ODATA.MS.CORE.API.Models
 {
     public class BaseEntity<T> : IEntityTypeConfiguration<T> where T : BaseEntity<T>
     {

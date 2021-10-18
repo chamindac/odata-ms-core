@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ODAT.MS.CORE.API", "ODAT.MS.CORE.API\ODAT.MS.CORE.API.csproj", "{23EF959E-E1C1-4335-84CD-6D87E8E843D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ODATA.MS.CORE.API", "ODATA.MS.CORE.API\ODATA.MS.CORE.API.csproj", "{9A497835-4D39-4361-BC35-812EEA97332E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{23EF959E-E1C1-4335-84CD-6D87E8E843D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23EF959E-E1C1-4335-84CD-6D87E8E843D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23EF959E-E1C1-4335-84CD-6D87E8E843D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23EF959E-E1C1-4335-84CD-6D87E8E843D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A497835-4D39-4361-BC35-812EEA97332E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A497835-4D39-4361-BC35-812EEA97332E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A497835-4D39-4361-BC35-812EEA97332E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A497835-4D39-4361-BC35-812EEA97332E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
