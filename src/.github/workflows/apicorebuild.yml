@@ -1,0 +1,33 @@
+on: [push]
+
+jobs:
+  dotnetpack_nugetpush_job:
+    runs-on: ubuntu-latest
+    
+    env:
+      projectpath: ./odata-ms-core/src/ODATA.MS.CORE.API/ODATA.MS.CORE.API.csproj
+      buildconfiguration: release
+      outputpath: mypkgout
+      runid: ${{github.run_id}}
+      githubtoken: ${{ secrets.GITHUB_TOKEN }}
+      githubnugetpackageregistry: https://nuget.pkg.github.com/chamindac/index.json
+    
+    steps:
+      - uses: actions/checkout@v2.3.4
+        
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v1.7.2
+        with:
+          dotnet-version: '5.0.101'
+        
+      - name: Restore with dotnet
+        run: dotnet restore ${projectpath}
+
+      - name: Build with dotnet
+        run: dotnet build ${projectpath} --configuration ${buildconfiguration} --version-suffix ${runid} --no-restore
+        
+      - name: Pack as nuget with dotnet
+        run: dotnet pack ${projectpath} --configuration ${buildconfiguration} --output ${outputpath} --version-suffix ${runid} --no-build --no-restore
+      
+      - name: Publish Nuget to GitHub registry
+        run: dotnet nuget push ${outputpath}/*.nupkg --api-key ${githubtoken} --source ${githubnugetpackageregistry} --skip-duplicate --no-symbols true
