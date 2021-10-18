@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      projectpath: ./odata-ms-core/src/ODATA.MS.CORE.API/ODATA.MS.CORE.API.csproj
+      projectpath: ./src/ODATA.MS.CORE.API/ODATA.MS.CORE.API.csproj
       buildconfiguration: release
       outputpath: mypkgout
       runid: ${{github.run_id}}
