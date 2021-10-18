@@ -8,7 +8,7 @@
     <Authors>chamindac</Authors>
     <Company>My Company</Company>
     <PackageDescription>NuGet package sample with dotnet pack!</PackageDescription>
-    <RepositoryUrl>https://github.com/chamindac/MyNuGetPackageDemo.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/chamindac/odata-ms-core.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
