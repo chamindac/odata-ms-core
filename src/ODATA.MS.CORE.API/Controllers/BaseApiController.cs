@@ -14,7 +14,7 @@ namespace ODATA.MS.CORE.API.Controllers
 {
     public class BaseApiController<T, S, U> : ODataController where T : BaseEntity<T> where S : ODataController where U: DbContext
     {
-        public readonly U _DbContext;
+        protected readonly U _DbContext;
         protected readonly ILogger<S> _logger;
         private readonly DbSet<T> dbSet;
         public BaseApiController(ILogger<S> logger, U DbContext)
