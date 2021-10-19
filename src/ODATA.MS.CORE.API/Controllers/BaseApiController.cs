@@ -12,12 +12,12 @@ using System.Threading.Tasks;
 
 namespace ODATA.MS.CORE.API.Controllers
 {
-    public class BaseApiController<T, S> : ODataController where T : BaseEntity<T> where S : ODataController
+    public class BaseApiController<T, S, U> : ODataController where T : BaseEntity<T> where S : ODataController where U: DbContext
     {
-        protected readonly DbContext _DbContext;
+        protected readonly U _DbContext;
         protected readonly ILogger<S> _logger;
         private readonly DbSet<T> dbSet;
-        public BaseApiController(ILogger<S> logger, DbContext DbContext)
+        public BaseApiController(ILogger<S> logger, U DbContext)
         {
             _logger = logger;
             _DbContext = DbContext;
