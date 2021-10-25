@@ -30,6 +30,18 @@ namespace ODATA.MS.CORE.API.Controllers
             return Ok(_DbContext.Set<T>().AsQueryable<T>());
         }
 
+        public virtual IActionResult Get(int key)
+        {
+            var entity = _DbContext.Set<T>().Where(e => e.Id == key);
+
+            if (!entity.Any())
+            {
+                return NotFound();
+            }
+
+            return Ok(entity);
+        }
+
         public virtual IActionResult Post([FromBody] T entity)
         {
             if (!ModelState.IsValid)

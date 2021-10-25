@@ -12,6 +12,8 @@ namespace ODATA.MS.CORE.API.Models
 {
     public class BaseEntity<T> : IEntityTypeConfiguration<T> where T : BaseEntity<T>
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
 
         //ObjVersion
         [ConcurrencyCheck]
